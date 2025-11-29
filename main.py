@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from routes import budget_router, items_router, optimization_router, cart_router
 import os
+import uvicorn
 
 
 def create_app() -> FastAPI:
@@ -48,14 +49,4 @@ app = create_app()
 
 
 if __name__ == "__main__":
-    import uvicorn
-    import webbrowser
-    import threading
-    
-    def open_browser():
-        import time
-        time.sleep(1.5)
-        webbrowser.open("http://localhost:8000")
-    
-    threading.Thread(target=open_browser, daemon=True).start()
     uvicorn.run(app, host="127.0.0.1", port=8000)
