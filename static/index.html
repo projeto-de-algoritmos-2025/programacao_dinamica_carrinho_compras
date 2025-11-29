@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Programação Dinâmica</title>
+    <link rel="stylesheet" href="static\styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Carrinho de Compras Inteligente</h1>
+            <p class="subtitle">Otimize suas compras com seu orçamento disponível</p>
+        </header>
+
+        <main>
+            <!-- Seção de Orçamento -->
+            <section class="budget-section">
+                <h2>Seu Orçamento</h2>
+                <div class="budget-input-group">
+                    <label for="budget">Dinheiro disponível (R$):</label>
+                    <input type="number" id="budget" min="0" step="0.01" placeholder="Ex: 500.00">
+                    <button id="setBudget" class="btn btn-primary">Definir Orçamento</button>
+                </div>
+                <div id="budgetDisplay" class="budget-display hidden">
+                    <p>Orçamento atual: <strong id="currentBudget">R$ 0,00</strong></p>
+                </div>
+            </section>
+
+            <!-- Seção de Adicionar Item -->
+            <section class="add-item-section">
+                <h2>Adicionar Item ao Carrinho</h2>
+                <form id="itemForm" class="item-form">
+                    <div class="form-group">
+                        <label for="itemName">Nome do Item:</label>
+                        <input type="text" id="itemName" required placeholder="Ex: Notebook">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Preço (R$):</label>
+                        <input type="number" id="itemPrice" min="0.01" step="0.01" required placeholder="Ex: 299.90">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPriority">Prioridade (1-10):</label>
+                        <input type="number" id="itemPriority" min="1" max="10" required placeholder="Ex: 8">
+                        <small>1 = Menor prioridade, 10 = Maior prioridade</small>
+                    </div>
+                    <button type="submit" class="btn btn-success">Adicionar Item</button>
+                </form>
+            </section>
+
+            <!-- Seção de Itens no Carrinho -->
+            <section class="cart-section">
+                <h2>Seus Itens</h2>
+                <div id="emptyCart" class="empty-cart">
+                    <p>Nenhum item adicionado ainda. Adicione itens acima!</p>
+                </div>
+                <div id="cartItems" class="cart-items hidden"></div>
+            </section>
+
+            <!-- Seção de Otimização -->
+            <section class="optimization-section hidden" id="optimizationSection">
+                <h2>Itens Recomendados (Otimização)</h2>
+                <p class="info-text">Com base no seu orçamento e prioridades, selecionamos os melhores itens:</p>
+                <button id="optimizeBtn" class="btn btn-accent">Otimizar Seleção</button>
+                <div id="optimizedResult" class="optimized-result hidden">
+                    <h3>Resultado da Otimização:</h3>
+                    <div id="optimizedItems"></div>
+                    <div class="optimization-summary">
+                        <p>Total: <strong id="optimizedTotal">R$ 0,00</strong></p>
+                        <p>Valor total de prioridade: <strong id="optimizedPriority">0</strong></p>
+                        <p>Restante do orçamento: <strong id="remainingBudget">R$ 0,00</strong></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Usando Programação Dinâmica (Problema da Mochila) para otimizar suas compras</p>
+        </footer>
+    </div>
+
+    <script src="static\script.js"></script>
+</body>
+</html>
