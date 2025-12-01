@@ -18,3 +18,4 @@ class OptimizeRequest(BaseModel):
                 ]
             }
         }
+
