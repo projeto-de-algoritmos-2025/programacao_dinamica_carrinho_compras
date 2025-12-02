@@ -110,9 +110,8 @@ programacao_dinamica_carrinho_compras/
 │   ├── optimization.py
 │   └── cart.py
 ├── static/
-│   ├── index.html
-│   ├── styles.css
-│   └── script.js
+│   └── index.html
+│      
 ├── main.py
 ├── knapsack.py
 ├── requirements.txt
@@ -138,3 +137,7 @@ Tabela de programação dinâmica dp[i][w]:
 ## Licença
 
 MIT License - veja [LICENSE](LICENSE) para detalhes.
+
+## Apresentação em video
+
+[clique aqui](https://youtu.be/t7oNxeypieI)
