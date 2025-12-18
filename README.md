@@ -119,6 +119,12 @@ programacao_dinamica_carrinho_compras/
 └── LICENSE
 ```
 
+Exemplo da execução do Aplicativo:
+<p align="center">
+  <img src="assets/carrinho.png" alt="Carrinho" width="700px"/>
+</p>
+
+
 ## Problema da Mochila
 
 **Entrada:**
